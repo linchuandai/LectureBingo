@@ -4,6 +4,5 @@ var http = require('http').Server(app)
 
 app.use(express.static(__dirname))
 
-
 var server = http.listen(3000, () => {
 })
