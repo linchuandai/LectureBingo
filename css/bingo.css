@@ -1,3 +1,19 @@
+#bingopage{
+    width:455px;
+    margin:25 auto;
+}
+
+
+h1{
+    font-family:arial;
+    text-align:center;
+    padding:3px;
+    color:#211111;
+    background-color:#EEEEEE;
+}
+
+
+
 td {
     font-family: arial;
     color: #333;

@@ -1,58 +1,65 @@
 <doctype html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="css/bingo.css">
+        <!-- Custom Style Sheet -->
+        <link rel="stylesheet" href="css/bingo.css">
 
-    <title>Lecture Bingo</title>
-</head>
-<body>
+        <title>Lecture Bingo</title>
+    </head>
 
-    <table "class=table">
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
-            <td>15</td>
-        </tr>
-        <tr>
-            <td>16</td>
-            <td>17</td>
-            <td>18</td>
-            <td>19</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>21</td>
-            <td>22</td>
-            <td>23</td>
-            <td>24</td>
-            <td>25</td>
-    </tr>
+    <body>
 
-    </table>
+        <h1>Lecture Bingo</h1>
+
+        <div id="bingopage">
+
+            <table>
+                <tr>
+                    <td id="cell1">  </td>
+                    <td id="cell2"> &nbsp; </td>
+                    <td id="cell3"> &nbsp; </td>
+                    <td id="cell4"> &nbsp; </td>
+                    <td id="cell5"> &nbsp; </td>
+                </tr>
+                <tr>
+                    <td id="cell6"> &nbsp; </td>
+                    <td id="cell7"> &nbsp; </td>
+                    <td id="cell8"> &nbsp; </td>
+                    <td id="cell9"> &nbsp; </td>
+                    <td id="cell10"> &nbsp; </td>
+                </tr>
+                <tr>
+                    <td id="cell11"> &nbsp; </td>
+                    <td id="cell12"> &nbsp; </td>
+                    <td id="cell13"> Free </td>
+                    <td id="cell14"> &nbsp; </td>
+                    <td id="cell15"> &nbsp; </td>
+                </tr>
+                <tr>
+                    <td id="cell16"> &nbsp; </td>
+                    <td id="cell17"> &nbsp; </td>
+                    <td id="cell18"> &nbsp; </td>
+                    <td id="cell19"> &nbsp; </td>
+                    <td id="cell20"> &nbsp; </td>
+                </tr>
+                <tr>
+                    <td id="cell21"> &nbsp; </td>
+                    <td id="cell22"> &nbsp; </td>
+                    <td id="cell23"> &nbsp; </td>
+                    <td id="cell24"> &nbsp; </td>
+                    <td id="cell25"> &nbsp; </td>
+                </tr>
+            </table>
+
+        </div>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -60,3 +67,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
+<script>
+
+    var array = [];
+
+    for (var i = 1; i <= 25; i++){
+        array[i] = i;
+    }
+
+    $(() => {
+        init();
+    })
+
+    $('td').click(function () {
+
+        var toggle = this.style;
+        toggle.backgroundColor = toggle.backgroundColor ? "" : "#333";
+        toggle.color = toggle.color ? "" : "#fff";
+    });
+
+    function init(){
+        for(var i = 1; i<=25; i++) {
+            if (i != 13) {
+            $('#cell' + i).html(array[i]);
+            }
+        }
+    }
+
+</script>
