@@ -1,0 +1,11 @@
+td {
+    font-family: arial;
+    color: #333;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 5px solid #000000;
+    background-color: #F0F8FF;
+    cursor: pointer;
+}
